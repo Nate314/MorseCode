@@ -4,8 +4,7 @@
 
 /** A node for a Binary Tree. */
 template<typename Item_Type>
-struct BTNode
-{
+struct BTNode {
 	// Data Fields
 	Item_Type data;
 	BTNode<Item_Type>* left;
@@ -27,12 +26,11 @@ struct BTNode
 		//return os.str();
 		return "";
 	}
-}; // End BTNode
+};
 
 // Overloading the ostream insertion operator
 template<typename Item_Type>
-std::ostream& operator<<(std::ostream& out,
-	const BTNode<Item_Type>& node) {
+std::ostream& operator<<(std::ostream& out, const BTNode<Item_Type>& node) {
 		return out << node.to_string();
 }
 

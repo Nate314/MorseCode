@@ -20,7 +20,7 @@ using namespace std;
 
 int main() {
 	MorseCode mcode;
-	string message = "Nathan";
+	string message = "nathan";
 	string encoded = mcode.encode(message);
 	string decoded = mcode.decode(encoded);
 	cout << "Message String: " << message << endl;
