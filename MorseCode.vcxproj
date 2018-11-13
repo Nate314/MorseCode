@@ -117,12 +117,15 @@
   <ItemGroup>
     <ClCompile Include="MorseCode.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MorseEncoder.cpp" />
+    <ClCompile Include="MorseDecoder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Binary_Search_Tree.h" />
     <ClInclude Include="Binary_Tree.h" />
     <ClInclude Include="BTNode.h" />
     <ClInclude Include="MorseCode.h" />
+    <ClInclude Include="MorseEncoder.h" />
+    <ClInclude Include="MorseDecoder.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dictionary.txt" />

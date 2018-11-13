@@ -21,18 +21,27 @@
     <ClCompile Include="MorseCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MorseDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MorseEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BTNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Binary_Search_Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Binary_Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MorseCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MorseDecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MorseEncoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

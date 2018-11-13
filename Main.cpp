@@ -18,14 +18,42 @@
 #include<iostream>
 using namespace std;
 
-int main() {
+void menu() {
 	MorseCode mcode;
-	string message = "nathan";
-	string encoded = mcode.encode(message);
-	string decoded = mcode.decode(encoded);
-	cout << "Message String: " << message << endl;
-	cout << "Encoded String: " << encoded << endl;
-	cout << "Decoded String: " << decoded << endl;
-	system("pause");
+	string str;
+	string option;
+	cout << endl << "Would you like to encode (e), decode (d), or exit (exit)?" << endl;
+	getline(cin, option);
+	if (option == "e") {
+		cout << "Message: ";
+		getline(cin, str);
+		cout << endl << "Encoded: " << mcode.encode(str);
+	}
+	else if (option == "d") {
+		cout << "Message: ";
+		getline(cin, str);
+		cout << endl << "Decoded: " << mcode.decode(str);
+	}
+	else if (option == "exit") {
+		return;
+	}
+	menu();
+}
+
+int main() {
+	bool testing = true;
+	/* Menu just for fun */
+	if (testing) menu();
+	/* Assignment Requirements */
+	else {
+		MorseCode mcode;
+		string message = "nathan";
+		string encoded = mcode.encode(message);
+		string decoded = mcode.decode(encoded);
+		cout << "Message String: " << message << endl;
+		cout << "Encoded String: " << encoded << endl;
+		cout << "Decoded String: " << decoded << endl;
+		system("pause");
+	}
 	return 0;
 }
