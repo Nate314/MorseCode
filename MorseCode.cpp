@@ -24,9 +24,7 @@ MorseCode::MorseCode() {
 		// if ch IS a dot or a dash
 		else code += ch;
 	}
-	if (code != "") {
-		morse_codes.insert(std::pair<char, string>(current_char, code));
-	}
+	if (code != "") morse_codes.insert(std::pair<char, string>(current_char, code));
 	// initialize map and tree objects
 	encoder.initialize(morse_codes);
 	decoder.initialize(morse_codes);
@@ -58,16 +56,4 @@ string MorseCode::decode(string str) {
 	}
 	// return the decoded string
 	return decoded;
-}
-
-template <class T>
-bool has_root(Binary_Tree<T>& tree) {
-	try {
-		auto temp = tree.getRoot();
-		if (temp == NULL) return false;
-		else return true;
-	}
-	catch (exception ex) {
-		return false;
-	}
 }

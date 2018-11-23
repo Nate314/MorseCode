@@ -24,7 +24,7 @@ void menu() {
 	string option;
 	cout << endl << "Would you like to encode (e), decode (d), or exit (exit)?" << endl;
 	getline(cin, option);
-	if (option == "e") {
+ 	if (option == "e") {
 		cout << "Message: ";
 		getline(cin, str);
 		cout << endl << "Encoded: " << mcode.encode(str);
@@ -41,7 +41,7 @@ void menu() {
 }
 
 int main() {
-	bool testing = true;
+	bool testing = false;
 	/* Menu just for fun */
 	if (testing) menu();
 	/* Assignment Requirements */

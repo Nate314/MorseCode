@@ -2,15 +2,16 @@
 
 // inserts a char into the tree by the specified path
 Binary_Tree<char> insert(Binary_Tree<char> tree, string code, char ch, bool& added) {
+	// if there is more than one char left in the code
 	if (code.size() > 0) {
 		char dir = code[0];
 		if (tree.getRoot() == nullptr) tree.setRoot(new BTNode<char>('\n'));
-		if (dir == MorseDecoder::DOT)
-			return Binary_Tree<char>(tree.getRoot()->data,
+		// recursively call this function on the left subtree if DOT
+		if (dir == MorseDecoder::DOT) return Binary_Tree<char>(tree.getRoot()->data,
 				insert(tree.get_left_subtree(), code.substr(1, code.size() - 1), ch, added),
 				tree.get_right_subtree());
-		else if (dir == MorseDecoder::DASH)
-			return Binary_Tree<char>(tree.getRoot()->data,
+		// recursively call this function on the right subtree if DASH
+		else if (dir == MorseDecoder::DASH) return Binary_Tree<char>(tree.getRoot()->data,
 				tree.get_left_subtree(),
 				insert(tree.get_right_subtree(), code.substr(1, code.size() - 1), ch, added));
 	}
