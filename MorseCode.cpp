@@ -47,7 +47,7 @@ string MorseCode::encode(string str) {
 // decode a string of morse code tokens into an english word
 string MorseCode::decode(string str) {
 	string decoded = "";
-	istringstream tokens(str, MorseDecoder::TOKEN_SEPARATOR);
+	istringstream tokens(str);
 	string token;
 	// for each token in the morse code string
 	while (tokens >> token) {
