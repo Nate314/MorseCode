@@ -1,0 +1,6 @@
+# A console program, not a server: the container prints the encoded and decoded
+# sample message and exits. It publishes no ports.
+services:
+  morse:
+    build: .
+    mem_limit: 64m

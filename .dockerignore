@@ -1,0 +1,8 @@
+.git
+.env
+compose-launcher
+Debug
+Release
+x64
+.vs
+*.pdf
